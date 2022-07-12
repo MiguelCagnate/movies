@@ -1,0 +1,9 @@
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: rgb(15, 57, 148);
+    border-radius: 15px;
+    color: aliceblue;
+    margin: 20px;  
+    padding: 11px;  
+}
