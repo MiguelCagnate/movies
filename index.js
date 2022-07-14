@@ -536,13 +536,7 @@ function findSomeSerie() {
 
 // reduce imdbRating and calculate average
 function averageRating() {
-let result = changeRatingToNumber.map(function(a,b) {
-console.log(result);
-return a + b;  
-},0);
 }
-    
-
 
 // //averageRating();
 // let findRating = films.flatMap(imdbRating).filter('N/A').reduce(acumular)
