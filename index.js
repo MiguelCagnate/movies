@@ -494,24 +494,22 @@ const films = [
     ],
   },
 ];
-
 //console.log(films);
-
 // show all films titles
 function showTitleFilms() {
   let showAllTitles = films.flatMap(({ Title }) => Title);
   return showAllTitles;
 }
 //showTitleFilms();
-
 // create new array with imdbRating to number
-function changeRatingToNumber() {
-  let toNumber = films.filter((r) => r.imdbRating != "N/A");
-  let findRating = toNumber.flatMap(({imdbRating}) => imdbRating)
-  let ratingTing = findRating.replace(',','')
-  return ratingTing
- 
-}
+ function changeRatingToNumber() {
+  var toNumber = films.filter((r) => r.imdbRating != "N/A");
+  var findRating = toNumber.flatMap(({imdbRating}) => imdbRating);
+  var arrOfNum = findRating.map((str) => Number(str));
+  var laSuma = arrOfNum.reduce((a,b) => a + b); 
+  var average = (laSuma / arrOfNum.length).toFixed(1);
+  return Number(average); 
+} 
 // order films by year
 function orderFilmsByYear() {
   // faltan los años con guiones, arreglar eso !!!
@@ -537,13 +535,15 @@ function findSomeSerie() {
 //findSomeSerie();
 
 // reduce imdbRating and calculate average
-function averageRating(changeRatingToNumber) {
-  let result = changeRatingToNumber.forEach(e => {
-
-    
-  })
-  return result
+function averageRating() {
+let result = changeRatingToNumber.map(function(a,b) {
+console.log(result);
+return a + b;  
+},0);
 }
+    
+
+
 // //averageRating();
 // let findRating = films.flatMap(imdbRating).filter('N/A').reduce(acumular)
 //   return findRating;
